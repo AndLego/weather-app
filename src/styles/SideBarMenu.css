@@ -1,0 +1,50 @@
+.SideBarMenu {
+  width: 280px;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0 20px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 60px;
+}
+
+.menu-icon svg {
+  font-size: 4rem;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-list--item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-list--item svg {
+  font-size: 2.6rem;
+}
+
+.menu-list--item:hover {
+  cursor: pointer;
+}
+
+.menu-credits {
+  font-size: 1rem;
+  text-align: center;
+}

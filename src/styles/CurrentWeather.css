@@ -1,0 +1,28 @@
+ .currentWeather{
+    padding: 52px 0 0 52px;
+    grid-area: content;
+ }
+
+ .currentWeather-container{
+   background-color: rgba(17, 25, 40, 0.4);
+   border-top-left-radius: 12px;
+   border-top-right-radius: 12px;
+   border: 1px solid rgba(255, 255, 255, 0.125);
+ }
+
+ .currentWeather-main{
+    font-size: 2.8rem;
+    padding-left: 20px;
+ }
+
+ .currentWeather-location{
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding-left: 20px;
+ }
+
+ .currentWeather-temp{
+    padding-left: 20px;
+    font-size: 5rem;
+    font-weight: 800;
+ }

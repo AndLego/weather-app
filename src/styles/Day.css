@@ -1,0 +1,11 @@
+.daily-item{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.daily-icon{
+    height: 72px;
+    width: 72px;
+}
