@@ -1,19 +1,18 @@
-import { CurrentWeather } from "./component/CurrentWeather";
-import { ListDays } from "./component/ListDays";
+import React from "react";
+import { ContentContainer } from "./component/ContentContainer";
+import { DataContainer } from "./component/DataContainer";
 import { SideBarMenu } from "./component/SideBarMenu";
-import { WeatherStats } from "./component/WeatherStats";
+import { SearchBar } from "./component/SearchBar";
 import { ApiContextProvider } from "./Context/ApiContext";
-import "./styles/App.css"
 
 function App() {
   return (
     <ApiContextProvider>
-      <div className="Main-container sunny">
+      <ContentContainer>
         <SideBarMenu />
-        <CurrentWeather />
-        <WeatherStats />
-        <ListDays />
-      </div>
+        <SearchBar />
+        <DataContainer />
+      </ContentContainer>
     </ApiContextProvider>
   );
 }

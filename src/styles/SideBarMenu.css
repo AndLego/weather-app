@@ -1,6 +1,7 @@
 .SideBarMenu {
-  width: 280px;
-  grid-area: sidebar;
+  position: absolute;
+  height: 100%;
+  width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

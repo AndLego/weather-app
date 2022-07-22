@@ -1,9 +1,10 @@
 import React from "react";
 import { Day } from "./Day";
 import { APIContext } from "../Context/ApiContext";
-import "../styles/ListDays.css"
 
-const ListDays = () => {
+import "../styles/WeeklyWeather.css"
+
+const WeeklyWeather = () => {
   const { data } = React.useContext(APIContext);
   console.log(data);
 
@@ -12,11 +13,11 @@ const ListDays = () => {
   }
   return (
     <ul className="weekly-list">
-      {data.daily.map((day, id) => (
+      {data.daily.slice(1).map((day, id) => (
         <Day key={id} {...day} />
       ))}
     </ul>
   );
 };
 
-export { ListDays };
+export { WeeklyWeather };

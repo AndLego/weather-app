@@ -1,0 +1,11 @@
+.weekly-list {
+  height: 60vh;
+  border-radius: 4px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y proximity;
+  scrollbar-color: white black;
+  scrollbar-width: thin;
+}
+

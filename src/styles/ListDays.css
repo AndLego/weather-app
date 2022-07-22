@@ -1,11 +1,10 @@
 .weekly-list {
+  width: 40%;
   display: flex;
-  grid-area: week;
   justify-content: space-evenly;
   padding: 12px;
   margin: 0 48px;
   background-color: rgba(17, 25, 40, 0.4);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
 }

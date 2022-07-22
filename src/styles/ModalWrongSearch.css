@@ -1,0 +1,12 @@
+.wrong-location{
+    top: 60px;
+    right: 268px;
+    position: absolute;
+    font-size: 1.6rem;
+    background: rgba(17, 25, 40, 0.75);
+    height: 28px;
+    width: 160px;
+    text-align: center;
+    border-top: 1px dashed gray;
+    border-bottom-left-radius: 4px
+}

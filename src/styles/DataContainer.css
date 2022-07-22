@@ -1,0 +1,27 @@
+.data-select {
+  width: 40%;
+  height: 80vh;
+  margin-left: 40px;
+}
+
+.data-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 2rem;
+  gap: 12px;
+}
+
+.data-options h5:hover {
+  cursor: pointer;
+}
+
+.selected {
+  text-decoration: underline;
+}
+
+.notSelected {
+  color: bisque;
+  font-weight: 300;
+}

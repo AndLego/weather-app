@@ -5,28 +5,31 @@ import {
   BsWind,
   BsFillSunFill,
 } from "react-icons/bs";
-import "../styles/Day.css";
 
-const Day = (props) => {
-  const unixTime = props.dt * 1000;
-  const dateObject = new Date(unixTime);
-  const weekDayFormat = dateObject.toLocaleString("en-US", {
-    weekday: "long",
-  });
-  const monthFormat = dateObject.toLocaleString("en-US", {
-    month: "long",
-  });
-  const dayFormat = dateObject.toLocaleString("en-US", {
-    day: "numeric",
-  });
+const Hour = (props) => {
+  const unixConvertHour = (unix) => {
+    const dateObject = new Date(unix * 1000);
+    return dateObject.toLocaleString("en-US", { hour: "numeric" });
+  };
+  const unixConvertDay = (unix) => {
+    const unixTime = props.dt * 1000;
+    const dateObject = new Date(unixTime);
+    const weekDayFormat = dateObject.toLocaleString("en-US", {
+      weekday: "long",
+    });
+
+    const dayFormat = dateObject.toLocaleString("en-US", {
+      day: "numeric",
+    });
+
+    return `${weekDayFormat} ${dayFormat}`
+  };
 
   return (
     <li className="daily-item">
       <div className="item-day">
-        <p>{weekDayFormat}</p>
-        <p>
-          {monthFormat} {dayFormat}
-        </p>
+        <p>{unixConvertHour(props.dt)}</p>
+        <p>{unixConvertDay(props.dt)}</p>
       </div>
       <div className="item-details-container">
         <img
@@ -36,7 +39,7 @@ const Day = (props) => {
         />
         <div className="item-details">
           <span>
-            <BsThermometerHigh /> {Math.floor((props.temp.min + props.temp.max) / 2)}°c
+            <BsThermometerHigh /> {props.temp}°c
           </span>
           <span>
             <BsWind /> {props.wind_speed} m/s
@@ -54,4 +57,4 @@ const Day = (props) => {
   );
 };
 
-export { Day };
+export { Hour };
