@@ -1,0 +1,59 @@
+.saved-background {
+  background: rgba(32, 35, 41, 0.8);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saved-hero {
+  width: 40%;
+  height: 340px;
+  position: relative;
+}
+
+.saved-hero h1 {
+  margin-bottom: 12px;
+}
+
+.saved-item {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  color: antiquewhite;
+
+  font-size: 2rem;
+  grid-template-columns: 65% 20% 15%;
+}
+
+.delete-location {
+  color: red;
+}
+
+.go-location {
+  color: green;
+}
+
+.delete-location:hover,
+.go-location:hover,
+.closeSaved:hover {
+  cursor: pointer;
+}
+
+.closeSaved {
+  position: absolute;
+  top: -18px;
+  right: -12px;
+  font-size: 3rem;
+}
+
+@media (max-width: 800px) {
+  .saved-hero {
+    width: 60%;
+  }
+}

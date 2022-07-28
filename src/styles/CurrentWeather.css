@@ -11,6 +11,10 @@
   padding: 8px;
 }
 
+.weather-current p{
+  font-size: 1.6rem;
+}
+
 .forecast-div {
   font-size: 2.4rem;
   font-weight: 100;
@@ -34,6 +38,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  font-size: 1rem;
 }
 
 .weather-main-details svg {
@@ -72,4 +77,10 @@
   display: flex;
   justify-content: space-between;
   margin: 8px 0;
+}
+
+@media (max-width: 767px) {
+  .weather-container {
+    width: 100%;
+  }
 }

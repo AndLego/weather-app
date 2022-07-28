@@ -1,5 +1,4 @@
 .search-bar {
-  position: absolute;
   width: 88%;
   padding: 24px 36px 0 220px;
   font-size: 3rem;
@@ -10,13 +9,23 @@
   font-size: 3rem;
 }
 
+.current-location span {
+  font-size: 2.2rem;
+  color: greenyellow;
+  filter: drop-shadow(2px 4px 6px greenyellow);
+}
+
+.current-location span:hover {
+  cursor: pointer;
+}
+
 .current-location {
   display: flex;
   align-items: flex-end;
   gap: 12px;
 }
 
-.current-location p{
+.current-location p {
   font-weight: 100;
   font-size: 2rem;
 }
@@ -55,4 +64,17 @@
   background: rgba(17, 25, 40, 0.75);
   color: white;
   font-size: 2rem;
+}
+
+@media (max-width: 910px) {
+  .search-bar {
+    padding: 24px 36px 0 160px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-bar {
+    padding: 24px 36px 0 80px;
+  }
 }

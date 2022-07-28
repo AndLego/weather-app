@@ -1,0 +1,38 @@
+.map-background {
+  background: rgba(32, 35, 41, 0.8);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.map-hero {
+  width: 60%;
+  height: 60%;
+  position: relative;
+  z-index: 0;
+}
+
+.closeMap {
+  position: absolute;
+    z-index: 5;
+    right: -24px;
+    top: -30px;
+    color: mediumvioletred;
+    font-size: 4rem;
+}
+
+.closeMap:hover{
+  cursor: pointer;
+  color: red;
+}

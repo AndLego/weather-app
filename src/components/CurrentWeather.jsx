@@ -5,8 +5,6 @@ import { BsThermometerHigh } from "react-icons/bs";
 
 import "../styles/CurrentWeather.css";
 
-//https://api.openweathermap.org/data/3.0/onecall?lat=4.705036&lon=-74.056782&exclude={part}&appid=7a4e9ebc5971eb8ddbda995d178ffd9a
-
 const CurrentWeather = () => {
   const { data } = React.useContext(APIContext);
 
@@ -23,12 +21,6 @@ const CurrentWeather = () => {
 
     return `${rta[0]}:${minute} ${rta[1]}`;
   };
-
-  // const unixTime = data.current.dt * 1000;
-  // const dateObject = new Date(unixTime);
-  // const weekDayFormat = dateObject.toLocaleString("en-US", {
-  //   weekday: "long",
-  // });
 
   const capitalize = (str) => {
     const words = str.split(" ");

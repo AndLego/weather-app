@@ -1,7 +1,6 @@
 .data-select {
   width: 40%;
   height: 80vh;
-  margin-left: 40px;
 }
 
 .data-options {
@@ -24,4 +23,12 @@
 .notSelected {
   color: bisque;
   font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .data-select {
+    padding: 0px 20px 0px 20px;
+    margin-top: 28px;
+    width: 100%;
+  }
 }

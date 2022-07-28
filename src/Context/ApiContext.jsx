@@ -35,6 +35,12 @@ const ApiContextProvider = ({ children }) => {
     fetchData();
   }, [city]);
 
+  if (!placeValidator) {
+    setTimeout(() => {
+      setPlaceValidator(true);
+    }, 2000);
+  }
+
   React.useEffect(() => {
     async function fetchData() {
       const res = await fetch(
@@ -52,6 +58,7 @@ const ApiContextProvider = ({ children }) => {
         data,
         setCity,
         geoData,
+        coords,
         setCoords,
         placeValidator,
       }}

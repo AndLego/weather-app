@@ -1,14 +1,23 @@
 import React from "react";
+import { Map } from "./Map";
+import { SaveLocation } from "./SaveLocation";
+
 import "../styles/SideBarMenu.css";
 import { GiPaperWindmill } from "react-icons/gi";
-import {
-  TbMap,
-  TbMapSearch,
-  TbSmartHome,
-  TbCalendarStats,
-} from "react-icons/tb";
+import { BsSave } from "react-icons/bs";
+import { TbMap, TbSmartHome } from "react-icons/tb";
 
 const SideBarMenu = () => {
+  const [map, setMap] = React.useState(false);
+  const [saved, setSaved] = React.useState(false);
+
+  const handleMap = () => {
+    setMap(true);
+  };
+  const handleSaved = () => {
+    setSaved(true);
+  };
+
   return (
     <section className="SideBarMenu">
       <ul className="menu-list">
@@ -22,20 +31,17 @@ const SideBarMenu = () => {
           <p>Dashboard</p>
         </li>
 
-        <li className="menu-list--item">
+        <li className="menu-list--item" onClick={handleMap}>
           <TbMap />
           <p>Map</p>
         </li>
+        {map && <Map close={setMap} />}
 
-        <li className="menu-list--item">
-          <TbMapSearch />
+        <li className="menu-list--item" onClick={handleSaved}>
+          <BsSave />
           <p>Saved Location</p>
         </li>
-
-        <li className="menu-list--item">
-          <TbCalendarStats />
-          <p>Calendar</p>
-        </li>
+        {saved && <SaveLocation close={setSaved} />}
       </ul>
 
       <div className="menu-credits">

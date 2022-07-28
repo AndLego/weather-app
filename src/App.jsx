@@ -1,18 +1,21 @@
 import React from "react";
-import { ContentContainer } from "./component/ContentContainer";
-import { DataContainer } from "./component/DataContainer";
-import { SideBarMenu } from "./component/SideBarMenu";
-import { SearchBar } from "./component/SearchBar";
+import { ContentContainer } from "./components/ContentContainer";
+import { DataContainer } from "./components/DataContainer";
+import { SideBarMenu } from "./components/SideBarMenu";
+import { SearchBar } from "./components/SearchBar";
 import { ApiContextProvider } from "./Context/ApiContext";
+import { SavePlaceContextProvider } from "./Context/SavePlaceContext";
 
 function App() {
   return (
     <ApiContextProvider>
-      <ContentContainer>
-        <SideBarMenu />
-        <SearchBar />
-        <DataContainer />
-      </ContentContainer>
+      <SavePlaceContextProvider>
+        <ContentContainer>
+          <SideBarMenu />
+          <SearchBar />
+          <DataContainer />
+        </ContentContainer>
+      </SavePlaceContextProvider>
     </ApiContextProvider>
   );
 }

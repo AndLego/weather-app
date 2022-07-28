@@ -1,7 +1,7 @@
 import React from "react";
-import { CurrentWeather } from "../component/CurrentWeather";
-import { WeeklyWeather } from "../component/WeeklyWeather";
-import { HourlyWeather } from "../component/HourlyWeather";
+import { CurrentWeather } from "../components/CurrentWeather";
+import { WeeklyWeather } from "../components/WeeklyWeather";
+import { HourlyWeather } from "../components/HourlyWeather";
 import "../styles/DataContainer.css";
 
 const DataContainer = () => {

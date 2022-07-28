@@ -27,14 +27,16 @@
 .menu-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 .menu-list--item {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  flex-direction: column;
+  border-radius: 4px;
 }
 
 .menu-list--item svg {
@@ -43,9 +45,38 @@
 
 .menu-list--item:hover {
   cursor: pointer;
+  background-color: aquamarine;
+  color: indigo;
 }
 
 .menu-credits {
   font-size: 1rem;
   text-align: center;
+}
+
+@media (max-width: 910px) {
+  .SideBarMenu {
+    width: 140px;
+  }
+  .menu-icon {
+    flex-direction: column;
+  }
+  .menu-list--item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .SideBarMenu {
+    width: 60px;
+  }
+  .menu-icon h1 {
+    display: none;
+  }
+  .menu-list {
+    margin-top: 60px;
+  }
+  .menu-list--item p {
+    display: none;
+  }
 }

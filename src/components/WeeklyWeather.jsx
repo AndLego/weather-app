@@ -6,7 +6,6 @@ import "../styles/WeeklyWeather.css"
 
 const WeeklyWeather = () => {
   const { data } = React.useContext(APIContext);
-  console.log(data);
 
   if (!data) {
     return <p>Loading</p>;
