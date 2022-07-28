@@ -7,7 +7,7 @@ const HourlyWeather = () => {
   const { data } = React.useContext(APIContext);
 
   if (!data) {
-    return <p>Loading</p>;
+    return <p></p>;
   }
   data.hourly.length = 12
   return (

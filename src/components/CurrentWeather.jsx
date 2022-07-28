@@ -1,5 +1,6 @@
 import React from "react";
 import { APIContext } from "../Context/ApiContext";
+
 import { RiWindyFill, RiContrastDrop2Line } from "react-icons/ri";
 import { BsThermometerHigh } from "react-icons/bs";
 
