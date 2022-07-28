@@ -1,5 +1,5 @@
 import React from "react";
-
+/* eslint-disable */
 function useLocalStorage(itemName, initialValue) {
   const [country, setCountry] = React.useState(initialValue);
 
@@ -27,5 +27,5 @@ function useLocalStorage(itemName, initialValue) {
 
   return { country, saveCountry };
 }
-
+/* eslint-enable */
 export { useLocalStorage };

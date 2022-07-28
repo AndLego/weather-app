@@ -35,7 +35,7 @@ function MinimapBounds({ parentMap, zoom }) {
     [parentMap]
   );
   useMapEvent("click", onClick);
-
+  /* eslint-disable */
   // Keep track of bounds in state to trigger renders
   const [bounds, setBounds] = React.useState(parentMap.getBounds());
   const onChange = React.useCallback(() => {
@@ -93,7 +93,7 @@ const Map = ({ close }) => {
   const handleClose = () => {
     return close(false);
   };
-
+  /* eslint-enable */
   return ReactDOM.createPortal(
     <div className="map-background">
       <div className="map-hero">
